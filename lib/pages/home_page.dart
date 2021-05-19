@@ -144,22 +144,24 @@ class _HomePageState extends State<HomePage> {
 
   Widget _btnWidget() {
     return Container(
-      child: RaisedButton(
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 15,
+          ),
+          onPrimary: AppColors.white,
+          primary: AppColors.btnColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
         child: Text(
           "Get a Quote",
           style: TextStyle(
             fontSize: 18,
             fontFamily: AppString.fontMedium,
           ),
-        ),
-        padding: EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 15,
-        ),
-        textColor: AppColors.white,
-        color: AppColors.btnColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
         ),
         onPressed: () {},
       ),
@@ -246,7 +248,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         margin: EdgeInsets.all(5),
                         padding: EdgeInsets.symmetric(
-                          horizontal: 15,
+                          horizontal: 5,
                           vertical: 5,
                         ),
                         decoration: BoxDecoration(
